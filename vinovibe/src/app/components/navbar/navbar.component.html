@@ -1,0 +1,47 @@
+<nav class="nav-bar">
+  <div class="nav-option">
+    <button class="nav-btn" (click)="toggleDropdown('adega')">
+      Adega
+      <svg [class.rotate]="!adegaDropdownVisible" class="nav-icon" height="15" width="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/>
+      </svg>
+    </button>
+    <div *ngIf="adegaDropdownVisible" class="dropdown-content show">
+      <a href="#">Tinto do sul italiano</a>
+      <a href="#">Tinto da Toscana</a>
+      <a href="#">Rioja espanhol tinto</a>
+      <a href="#">Pinotage sul-africano</a>
+      <a href="#">Amarone italiano</a>
+    </div>
+  </div>
+  <div class="nav-option">
+    <button class="nav-btn" (click)="toggleDropdown('pais')">
+      País
+      <svg [class.rotate]="!paisDropdownVisible" class="nav-icon" height="15" width="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/>
+      </svg>
+    </button>
+    <div *ngIf="paisDropdownVisible" class="dropdown-content show">
+      <a href="#">Brasil</a>
+      <a href="#">França</a>
+      <a href="#">Itália</a>
+      <a href="#">Espanha</a>
+      <a href="#">Argentina</a>
+    </div>
+  </div>
+  <div class="nav-option">
+    <button class="nav-btn" (click)="toggleDropdown('uva')">
+      Uva
+      <svg [class.rotate]="!uvaDropdownVisible" class="nav-icon" height="15" width="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/>
+      </svg>
+    </button>
+    <div *ngIf="uvaDropdownVisible" class="dropdown-content show">
+      <a href="#">Cabernet Sauvignon</a>
+      <a href="#">Merlot</a>
+      <a href="#">Syrah</a>
+      <a href="#">Chardonnay</a>
+      <a href="#">Sauvignon Blanc</a>
+    </div>
+  </div>
+</nav>

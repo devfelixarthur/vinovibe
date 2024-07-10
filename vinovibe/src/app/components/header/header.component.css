@@ -1,0 +1,46 @@
+.header{
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  z-index: 1000;
+  
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+}
+
+.search-input{
+  padding:7px;
+  min-width: 300px;
+  border: solid 1px rgb(213, 213, 213);
+  margin-left: 20px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(186, 22, 40);
+  font-size: 24px;
+}
+
+.acoes {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+
+}
+
+.vertical-separator {
+  margin-right: 10px;
+  border: solid 1px rgb(213, 213, 213);
+  height: 24px;
+}
+
+.login, .admin {
+  padding: 0 10px;
+}

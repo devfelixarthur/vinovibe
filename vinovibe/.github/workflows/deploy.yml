@@ -24,8 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Angular CLI
-        run: npm install -g @angular/cli
+      - name: Install Angular CLI locally
+        run: npm install @angular/cli
 
       - name: Build Angular project
         run: npx ng build --configuration production

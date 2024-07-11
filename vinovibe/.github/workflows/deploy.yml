@@ -1,7 +1,11 @@
 name: Deploy to Vercel
 
 on:
+<<<<<<< HEAD
   push:
+=======
+  pull:
+>>>>>>> origin/main
     branches:
       - main
 

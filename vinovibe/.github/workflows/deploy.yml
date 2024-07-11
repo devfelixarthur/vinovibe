@@ -1,11 +1,10 @@
 name: Deploy to Vercel
 
 on:
-<<<<<<< HEAD
   push:
-=======
-  pull:
->>>>>>> origin/main
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 

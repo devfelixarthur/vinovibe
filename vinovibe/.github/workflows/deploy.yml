@@ -1,7 +1,10 @@
-name: Deploy to Vercel (Improved)
+name: Deploy to Vercel
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
@@ -10,24 +13,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3  # Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3  # Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Recommended LTS version
+          node-version: '20'
+
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
 
       - name: Install dependencies
-        run: npm install  # Install project dependencies
-
-      - name: Install Angular CLI globally (if necessary)
-        run: npm install -g @angular/cli  # Install Angular CLI only if needed
+        run: npm install
 
       - name: Build Angular project
-        run: ng build --configuration=production  # Use the correct build command
+        run: ng build --configuration production
 
       - name: Deploy to Vercel
         env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}  # Access Vercel token
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          npm install -g vercel  # Install Vercel CLI if not already present
-          npx vercel --prod --token=$VERCEL_TOKEN
+          npm install -g vercel
+          vercel --prod --token=$VERCEL_TOKEN

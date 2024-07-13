@@ -1,9 +1,8 @@
-<app-header class="header"></app-header>
-<app-navbar></app-navbar>
-<div class="bar-separator"></div>
+<app-header *ngIf="!isLoginRoute" class="header"></app-header>
+<app-navbar *ngIf="!isLoginRoute"></app-navbar>
+<div *ngIf="!isLoginRoute" class="bar-separator"></div>
 <main class="body">
   <router-outlet></router-outlet>
 </main>
-<div class="bar-separator"></div>
-
-<app-footer class="footer"></app-footer>
+<div *ngIf="!isLoginRoute" class="bar-separator"></div>
+<app-footer *ngIf="!isLoginRoute" class="footer"></app-footer>

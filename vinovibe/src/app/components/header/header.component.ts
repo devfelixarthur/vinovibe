@@ -6,14 +6,23 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
 
   constructor(private router: Router) {}
 
   navigateTo(route: string): void {
-    this.router.navigate([route]);
+    if (route === 'home') {
+      const loginToken = sessionStorage.getItem('login_token');
+      if (loginToken) {
+        this.router.navigate(['home']);
+      } else {
+        this.router.navigate(['login']);
+      }
+    } else {
+      this.router.navigate([route]);
+    }
   }
 
 }

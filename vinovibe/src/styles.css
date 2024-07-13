@@ -16,6 +16,7 @@
   border-radius: 10px;
   color: #fff;
   box-shadow: 1px 1px;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -33,6 +34,7 @@
   border-radius: 10px;
   color: #ba1628;
   box-shadow: 1px 1px;
+  cursor: pointer;
 }
 
 .btn-secondary:hover {
@@ -50,6 +52,7 @@
   border-radius: 10px;
   color: #fff;
   box-shadow: 1px 1px;
+  cursor: pointer;
 }
 
 .btn-success:hover {
@@ -75,3 +78,15 @@
   height: 100vh;
 }
 
+.danger-required{
+  color: red;
+}
+
+.form-control{
+  border-radius: 10px;
+  border: solid 1px #a11321;
+}
+
+.form-title{
+  margin-bottom: 30px;
+}

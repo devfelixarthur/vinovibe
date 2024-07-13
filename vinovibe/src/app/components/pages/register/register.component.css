@@ -56,13 +56,28 @@
   box-sizing: border-box;
 }
 
+.forgot-password {
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0e00cf;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
 .button-group {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.btn-register {
+.button-group .btn-register {
+  margin-bottom: 30px;
+  width: 60%;
+}
+
+.btn-login {
   margin-top: 30px;
   width: 60%;
 }

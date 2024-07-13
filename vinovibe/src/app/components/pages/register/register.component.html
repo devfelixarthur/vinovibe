@@ -1,7 +1,7 @@
 <div class="register-container">
   <div class="register-left">
     <form class="register-form" id="registerForm">
-      <h2 class="form-title">Recovery Password</h2>
+      <h2 class="form-title">Register</h2>
       <div class="form-group">
         <label for="fullname">Name: <span class="danger-required">*</span></label>
         <input type="text" id="Registerfullname" class="form-control" placeholder="Enter your full name" required>
@@ -12,19 +12,26 @@
       </div>
       <div class="form-group">
         <label for="registerEmail">Email: <span class="danger-required">*</span></label>
-        <input type="email" id="registerEmail" class="form-control" placeholder="Enter your email login" required>
+        <input type="email" id="registerEmail" class="form-control" placeholder="example@example.com" required>
       </div>
       <div class="form-group">
-        <label for="password">New Password: <span class="danger-required">*</span></label>
-        <input type="password" id="registerPassword" class="form-control" placeholder="Enter your new password" required>
+        <label for="password">Password: <span class="danger-required">*</span></label>
+        <input type="password" id="registerPassword" class="form-control" placeholder="Enter your password" required>
       </div>
       <div class="form-group">
         <label for="password">Confirm Password: <span class="danger-required">*</span></label>
         <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm your password" required>
       </div>
       <div class="form-group button-group">
-        <button type="submit" class="btn btn-primary btn-login">Confirm</button>
+        <button type="submit" class="btn btn-primary btn-register">Register</button>
+      <div class="register-text">
+        <div class="divider-container">
+          <hr class="divider">
+          <p class="divider-text">OR</p>
+        </div>
       </div>
+      <button  type="button" (click)="navigateTo('login')" class="btn btn-secondary btn-login">Login</button>
+    </div>
     </form>
   </div>
   <div class="register-right">

@@ -90,3 +90,18 @@
 .form-title{
   margin-bottom: 30px;
 }
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.back-button svg {
+  width: 20px;
+  height: 20px;
+}

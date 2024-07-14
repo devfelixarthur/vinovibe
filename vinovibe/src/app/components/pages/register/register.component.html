@@ -1,5 +1,11 @@
 <div class="register-container">
   <div class="register-left">
+    <button class="back-button" (click)="navigateTo('login')">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20">
+        <path fill="#ba1628"
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+      </svg>
+    </button>
     <form class="register-form" id="registerForm">
       <h2 class="form-title">Register</h2>
       <div class="form-group">
@@ -24,13 +30,6 @@
       </div>
       <div class="form-group button-group">
         <button type="submit" class="btn btn-primary btn-register">Register</button>
-      <div class="register-text">
-        <div class="divider-container">
-          <hr class="divider">
-          <p class="divider-text">OR</p>
-        </div>
-      </div>
-      <button  type="button" (click)="navigateTo('login')" class="btn btn-secondary btn-login">Login</button>
     </div>
     </form>
   </div>

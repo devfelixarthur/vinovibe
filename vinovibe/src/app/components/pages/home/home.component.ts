@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CardWineComponent } from '../../card-wine/card-wine.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CardWineComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

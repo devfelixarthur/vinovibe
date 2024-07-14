@@ -1,0 +1,45 @@
+<div class="wine-card">
+    <div class="wine-card-left">
+      <img [src]="wine.image" alt="Wine Bottle" class="wine-card-image">
+    </div>
+    <div class="wine-card-right">
+      <div class="wine-info">
+        <h3 class="wine-name">{{ wine.name }}</h3>
+        <h4 class="wine-type">{{ wine.type }}</h4>
+        <p class="wine-location">
+          <img [src]="wine.flag" alt="Flag" class="wine-flag"> {{ wine.location }}
+        </p>
+      </div>
+      <div class="wine-rating-section">
+        <div class="wine-rating-value">{{ wine.rating }}</div>
+        <div class="wine-rating-stars">
+          <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+            <span class="star" [ngClass]="{
+              'full-star': wine.rating >= i + 1, 
+              'half-star': wine.rating > i && wine.rating < i + 1,
+              'empty-star': wine.rating <= i
+            }"></span>
+          </ng-container>
+        </div>
+        <div class="wine-rating-count">{{ wine.ratingCount }} classificações</div>
+      </div>
+      <div class="wine-price-section">
+        <span class="current-price">{{ wine.currentPrice | currency:'BRL' }}</span>
+      </div>
+    </div>
+    <div class="wine-card-footer">
+      <div class="user-review">
+        <div class="user-rating">
+          <img src="/assets/star-regular.svg" alt="User rated star FullStar" class="user-rating-star">
+          <span class="user-rating-value">{{ userRating.value }}</span>
+        </div>
+        <p class="user-comment">{{ userRating.comment }}</p>
+      </div>
+      <div class="user-info">
+        <span class="user-name">{{ userRating.name }}</span>
+        <span class="user-classifications">({{ userRating.classifications }} classificações)</span>
+        <span class="user-date">{{ userRating.date | date }}</span>
+      </div>
+    </div>
+  </div>
+  

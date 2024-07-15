@@ -10,9 +10,17 @@ import { CommonModule } from '@angular/common';
 })
 export class CardWineComponent {
   @Input() wine: any;
-  @Input() userRating: any;
 
-  getRatingPercentage(rating: number): string {
+  getRatingWidth(rating: number): string {
     return `${(rating / 5) * 100}%`;
   }
+
+  dateComment(date: string): string {
+    const [datePart, timePart] = date.split("T");
+    const [year, month, day] = datePart.split("-");
+    const [hour, minute] = timePart.split(":");
+
+    return `${day}/${month}/${year} ${hour}:${minute}`;
+  }
+
 }

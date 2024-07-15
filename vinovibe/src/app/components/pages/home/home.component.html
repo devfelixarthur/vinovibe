@@ -1,6 +1,38 @@
 <body class="body home">
   <div class="home-container">
-    <app-card-wine [wine]="wine" [userRating]="userRating"></app-card-wine>
-  </div>  
+    <div class="sidebar">
+      <button class="btn btn-primary">Cadastrar Vinho</button>
+      <div class="filter-section">
+        <h3>Tipos de vinho</h3>
+        <div class="wine-types">
+          <button class="filter-button" (click)="toggleActive($event)">Tinto</button>
+          <button class="filter-button" (click)="toggleActive($event)">Branco</button>
+          <button class="filter-button" (click)="toggleActive($event)">Espumante</button>
+          <button class="filter-button" (click)="toggleActive($event)">Rosé</button>
+        </div>
+        <h3>Classificação média do Vivino</h3>
+        <div class="ratings">
+          <label><input type="radio" name="rating" value="4"> 4.0+ Muito Bom</label>
+          <label><input type="radio" name="rating" value="3"> 3.0+ Bom</label>
+          <label><input type="radio" name="rating" value="2"> 2.0+ Regular</label>
+          <label><input type="radio" name="rating" value="1"> 1.0+ Ruim</label>
+        </div>
+        <h3>Uvas</h3>
+        <div class="grapes">
+          <button class="filter-button" (click)="toggleActive($event)">Cabernet Franc</button>
+          <button class="filter-button" (click)="toggleActive($event)">Cabernet Sauvignon</button>
+          <button class="filter-button" (click)="toggleActive($event)">Chardonnay</button>
+          <button class="filter-button" (click)="toggleActive($event)">Grenache</button>
+          <button class="filter-button" (click)="toggleActive($event)">Malbec</button>
+          <button class="filter-button" (click)="toggleActive($event)">Merlot</button>
+          <button class="filter-button" (click)="toggleActive($event)">Pinot Noir</button>
+          <button class="filter-button" (click)="toggleActive($event)">Riesling</button>
+          <button class="filter-button" (click)="toggleActive($event)">Sauvignon Blanc</button>
+          <button class="filter-button" (click)="toggleActive($event)">Shiraz/Syrah</button>
+        </div>
+      </div>
+    </div>
+    <div class="body-wines">
+      <app-card-wine *ngFor="let wine of wines" [wine]="wine"></app-card-wine>    </div>
+  </div>
 </body>
-

@@ -1,3 +1,87 @@
 .home-container{
+  display: flex;
   padding: 20px 20px 20px 20vh;
+}
+
+.home-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 25%;
+  padding: 16px;
+  background-color: #fafafa;
+  border-right: 1px solid #e6e6e6;
+}
+
+.filter-section {
+  margin-top: 30px;
+  margin-left: 5px;
+}
+
+.filter-section h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.wine-types,
+.grapes,
+.ratings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.ratings {
+  flex-direction: column;
+}
+
+.filter-button {
+  background-color: #fff;
+  border: 1px solid #ba1628;
+  font-weight: 500;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 30px;
+  color: #ba1628;
+  box-shadow: 1px 1px;
+  cursor: pointer;
+
+}
+
+.filter-button:hover {
+  background-color: #f0f0f099;
+  border: 1px solid #a11321;
+}
+
+.price-range {
+  margin: 16px 0;
+}
+
+.price-range .slider {
+  width: 100%;
+}
+
+.price-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.body-wines {
+  display: flex;
+  width: 75%;
+  padding: 16px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.btn-primary{
+  width: 100%;
+}
+
+.filter-button.active {
+  background-color: #ba1628;
+  color: white;
 }

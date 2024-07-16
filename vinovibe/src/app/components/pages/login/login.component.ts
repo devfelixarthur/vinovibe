@@ -39,7 +39,6 @@ export class LoginComponent {
         next: (response) => {
           if (response.titulo === 'Sucesso') {
             this.router.navigate(['/home']);
-            this.alertService.showSuccess("Login realizado com sucesso.")
           } else {
             this.alertService.showError('Usuário ou senha inválidos.');
           }

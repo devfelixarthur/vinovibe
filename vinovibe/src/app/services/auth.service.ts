@@ -72,7 +72,12 @@ export class AuthService {
 
 
   isLoggedIn(): boolean {
-    return !!localStorage.getItem('token_api');
+    const tokenApi = localStorage.getItem('token_api')
+    if(tokenApi){
+      return true
+    } else{
+      return false
+    }
   }
 
   logout(): void {

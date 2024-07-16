@@ -6,27 +6,27 @@
           d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
       </svg>
     </button>
-    <form class="register-form" id="registerForm">
+    <form class="register-form" id="registerForm" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
       <h2 class="form-title">Register</h2>
       <div class="form-group">
         <label for="fullname">Name: <span class="danger-required">*</span></label>
-        <input type="text" id="Registerfullname" class="form-control" placeholder="Enter your full name" required>
+        <input type="text" id="Registerfullname" class="form-control"  formControlName="nome" placeholder="Enter your full name" required>
       </div>
       <div class="form-group">
         <label for="birthDate">Birth: <span class="danger-required">*</span></label>
-        <input type="date" id="birthDate" class="form-control" required>
+        <input type="date" id="birthDate" class="form-control"  formControlName="dtNascimento"required>
       </div>
       <div class="form-group">
         <label for="registerEmail">Email: <span class="danger-required">*</span></label>
-        <input type="email" id="registerEmail" class="form-control" placeholder="example@example.com" required>
+        <input type="email" id="registerEmail" class="form-control"  formControlName="email" placeholder="example@example.com" required>
       </div>
       <div class="form-group">
         <label for="password">Password: <span class="danger-required">*</span></label>
-        <input type="password" id="registerPassword" class="form-control" placeholder="Enter your password" required>
+        <input type="password" id="registerPassword" class="form-control" formControlName="senha" placeholder="Enter your password" required>
       </div>
       <div class="form-group">
         <label for="password">Confirm Password: <span class="danger-required">*</span></label>
-        <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm your password" required>
+        <input type="password" id="confirmPassword" class="form-control" formControlName="confirmSenha" placeholder="Confirm your password" required>
       </div>
       <div class="form-group button-group">
         <button type="submit" class="btn btn-primary btn-register">Register</button>

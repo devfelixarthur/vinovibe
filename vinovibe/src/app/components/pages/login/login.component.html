@@ -1,14 +1,14 @@
 <div class="login-container">
   <div class="login-left">
-    <form class="login-form" id="loginForm">
+    <form class="login-form" id="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <h2 class="form-title">Login</h2>
       <div class="form-group">
         <label for="email">Email: <span class="danger-required">*</span></label>
-        <input type="email" id="loginEmail" class="form-control" placeholder="example@example.com" required>
+        <input type="email" id="loginEmail" class="form-control" formControlName="email" placeholder="example@example.com" required>
       </div>
       <div class="form-group">
         <label for="password">Password: <span class="danger-required">*</span></label>
-        <input type="password" id="loginPassword" class="form-control" placeholder="Enter your password" required>
+        <input type="password" id="loginPassword" class="form-control" formControlName="password" placeholder="Enter your password" required>
         <a class="forgot-password" (click)="navigateTo('recoveryPassword')">Forgot Password?</a>
       </div>
       <div class="form-group button-group">
@@ -19,7 +19,7 @@
             <p class="divider-text">OR</p>
           </div>
         </div>
-        <button  type="button" (click)="navigateTo('register')" class="btn btn-secondary btn-register">Register</button>
+        <button type="button" (click)="navigateTo('register')" class="btn btn-secondary btn-register">Register</button>
       </div>
     </form>
   </div>
@@ -27,8 +27,7 @@
     <div class="content-center">
       <div class="title-right">
         <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 512 512">
-          <path fill="#ba1628"
-            d="M393.4 9.4c12.5-12.5 32.8-12.5 45.3 0l64 64c12.5 12.5 12.5 32.8 0 45.3c-11.8 11.8-30.7 12.5-43.2 1.9l-9.5 9.5-48.8 48.8c-9.2 9.2-11.5 22.9-8.6 35.6c9.4 40.9-1.9 85.6-33.8 117.5L197.3 493.3c-25 25-65.5 25-90.5 0l-88-88c-25-25-25-65.5 0-90.5L180.2 153.3c31.9-31.9 76.6-43.1 117.5-33.8c12.6 2.9 26.4 .5 35.5-8.6l48.8-48.8 9.5-9.5c-10.6-12.6-10-31.4 1.9-43.2zM99.3 347.3l65.4 65.4c6.2 6.2 16.4 6.2 22.6 0l97.4-97.4c6.2-6.2 6.2-16.4 0-22.6l-65.4-65.4c-6.2-6.2-16.4-6.2-22.6 0L99.3 324.7c-6.2 6.2-6.2 16.4 0 22.6z" />
+          <path fill="#ba1628" d="M393.4 9.4c12.5-12.5 32.8-12.5 45.3 0l64 64c12.5 12.5 12.5 32.8 0 45.3c-11.8 11.8-30.7 12.5-43.2 1.9l-9.5 9.5-48.8 48.8c-9.2 9.2-11.5 22.9-8.6 35.6c9.4 40.9-1.9 85.6-33.8 117.5L197.3 493.3c-25 25-65.5 25-90.5 0l-88-88c-25-25-25-65.5 0-90.5L180.2 153.3c31.9-31.9 76.6-43.1 117.5-33.8c12.6 2.9 26.4 .5 35.5-8.6l48.8-48.8 9.5-9.5c-10.6-12.6-10-31.4 1.9-43.2zM99.3 347.3l65.4 65.4c6.2 6.2 16.4 6.2 22.6 0l97.4-97.4c6.2-6.2 6.2-16.4 0-22.6l-65.4-65.4c-6.2-6.2-16.4-6.2-22.6 0L99.3 324.7c-6.2 6.2-6.2 16.4 0 22.6z" />
         </svg>
         <h2 class="logo">VINOVIBE</h2>
       </div>
@@ -42,8 +41,7 @@
         <h4>Crie Suas Coleções</h4>
         <p>Crie suas próprias coleções e avaliações detalhadas.</p>
         <h4>Aprenda & Conecte-se</h4>
-        <p>Aprenda sobre diferentes variedades de uvas e métodos de vinificação. Conecte-se com uma comunidade global de
-          apreciadores de vinho.</p>
+        <p>Aprenda sobre diferentes variedades de uvas e métodos de vinificação. Conecte-se com uma comunidade global de apreciadores de vinho.</p>
       </div>
       <div class="highlight">
         <h3>🍷 Welcome to Vinovibe!</h3>
@@ -55,8 +53,7 @@
         <h4>Create Your Collections</h4>
         <p>Create your own collections and detailed reviews.</p>
         <h4>Learn & Connect</h4>
-        <p>Learn about different grape varieties and winemaking methods. Connect with a global community of wine
-          enthusiasts.</p>
+        <p>Learn about different grape varieties and winemaking methods. Connect with a global community of wine enthusiasts.</p>
       </div>
     </div>
   </div>

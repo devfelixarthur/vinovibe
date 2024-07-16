@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://wineapiservice.onrender.com",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

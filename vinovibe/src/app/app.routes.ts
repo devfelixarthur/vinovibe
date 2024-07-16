@@ -6,14 +6,15 @@ import { AdminComponent } from './components/pages/admin/admin.component';
 import { RecoveryPasswordComponent } from './components/pages/recovery-password/recovery-password.component';
 import { ConfigComponent } from './components/pages/config/config.component';
 import { RegisterComponent } from './components/pages/register/register.component';
+import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
-  {path: '', component: LoginComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'administrativo', component: AdminComponent},
-  {path: 'recoveryPassword', component: RecoveryPasswordComponent},
-  {path: 'config', component: ConfigComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
+  { path: '', component: LoginComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'about', component: AboutComponent, canActivate: [AuthGuard] },
+  { path: 'administrativo', component: AdminComponent, canActivate: [AuthGuard] },
+  { path: 'recoveryPassword', component: RecoveryPasswordComponent },
+  { path: 'config', component: ConfigComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent }
 ];

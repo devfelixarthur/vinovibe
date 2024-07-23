@@ -2,6 +2,7 @@
 <app-navbar *ngIf="!isLoginRoute"></app-navbar>
 <div *ngIf="!isLoginRoute" class="bar-separator"></div>
 <main class="body">
+  <app-spinner></app-spinner>
   <router-outlet></router-outlet>
 </main>
 <div *ngIf="!isLoginRoute" class="bar-separator"></div>

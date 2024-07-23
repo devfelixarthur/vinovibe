@@ -33,6 +33,22 @@
       </div>
     </div>
     <div class="body-wines">
-      <app-card-wine *ngFor="let wine of wines" [wine]="wine"></app-card-wine>    </div>
+      <div class="pagination-controls">
+        <label for="itemsPerPage">Itens por página:</label>
+        <select id="itemsPerPage" (change)="updateItemsPerPage($event)">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+        </select>
+      </div>
+      <div class="card-conteudo">
+        <app-card-wine *ngFor="let wine of wines" [wine]="wine"></app-card-wine>
+      </div>
+      <div class="pagination-footer">
+        <button class="btn btn-primary" (click)="previousPage()">Anterior</button>
+        <h5 class="page-info">Página {{ currentPage }} de {{ totalPages }}</h5>
+        <button class="btn btn-primary" (click)="nextPage()">Próximo</button>
+      </div>
+    </div>
   </div>
 </body>

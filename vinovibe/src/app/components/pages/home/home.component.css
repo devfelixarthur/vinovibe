@@ -71,10 +71,13 @@
 
 .body-wines {
   display: flex;
-  width: 75%;
+  width: 100%;
   padding: 16px;
   justify-content: space-around;
   flex-wrap: wrap;
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .btn-primary{
@@ -85,3 +88,37 @@
   background-color: #ba1628;
   color: white;
 }
+
+.card-conteudo {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.pagination-controls {
+  margin-bottom: 16px;
+}
+
+.pagination-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  background-color: #fafafa;
+  position: sticky;
+  bottom: 0;
+}
+
+.page-info {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.pagination-footer h5 {
+  margin: 0 30px;
+}
+

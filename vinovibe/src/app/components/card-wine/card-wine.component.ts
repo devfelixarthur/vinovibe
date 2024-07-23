@@ -16,6 +16,9 @@ export class CardWineComponent {
   }
 
   dateComment(date: string): string {
+    if (!date) {
+      return ""
+    }
     const [datePart, timePart] = date.split("T");
     const [year, month, day] = datePart.split("-");
     const [hour, minute] = timePart.split(":");

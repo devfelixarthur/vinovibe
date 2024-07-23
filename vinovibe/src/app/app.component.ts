@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 
@@ -12,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, FooterComponent, HeaderComponent, NavbarComponent, FormsModule],
+  imports: [CommonModule, RouterOutlet, FooterComponent, HeaderComponent, NavbarComponent, FormsModule, SpinnerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

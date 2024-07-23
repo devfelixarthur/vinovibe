@@ -1,22 +1,22 @@
 <div class="wine-card">
   <div class="wine-info">
     <div class="wine-card-left">
-      <img [src]="wine.image" alt="Wine Bottle" class="wine-card-image">
+      <img [src]="wine.imagem" alt="Wine Bottle" class="wine-card-image">
     </div>
     <div class="wine-details">
-      <h3 class="wine-name">{{ wine.name }}</h3>
+      <h3 class="wine-name">{{ wine.nome }}</h3>
       <h4 class="wine-type">{{ wine.adega }}</h4>
       <h4 class="wine-uva">{{ wine.uva }}</h4>
       <h4 class="wine-safra">{{ wine.safra }}</h4>
-      <p class="wine-location">{{ wine.Pais }}</p>
+      <p class="wine-location">{{ wine.pais }}</p>
     </div>
     <div class="wine-rating-section">
       <div style="display: flex; flex-direction: column;">
         <div>
-          <div class="wine-rating-value">{{ wine.avaliation }} <span class="wine-rating-count">
-              ({{wine.qunatityAvaliation}} Avaliações)</span></div>
+          <div class="wine-rating-value">{{ wine.avaliacao }} <span class="wine-rating-count">
+              ({{wine.qtdAvaliacao}} Avaliações)</span></div>
           <div class="wine-rating-bar">
-            <div class="wine-rating-bar-fill" [ngStyle]="{'width': getRatingWidth(wine.avaliation)}"></div>
+            <div class="wine-rating-bar-fill" [ngStyle]="{'width': getRatingWidth(wine.avaliacao)}"></div>
           </div>
         </div>
         <div class="price-button-section">
@@ -26,14 +26,6 @@
       <div>
       </div>
     </div>
-  </div>
+  </div>''
   <div class="wine-card-footer">
-    <div class="user-review">
-      <p class="user-comment">"{{ wine.comments[0].comentarios }}"</p>
     </div>
-    <div class="user-info">
-      <span class="user-name">{{ wine.comments[0].nomeUsuario }}</span>
-      <span class="user-date"> ( {{dateComment(wine.comments[0].dataCadastro)}} )</span>
-    </div>
-  </div>
-</div>

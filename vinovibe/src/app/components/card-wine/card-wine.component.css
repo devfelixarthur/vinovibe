@@ -6,7 +6,7 @@
   overflow: hidden;
   margin: 16px 0;
   max-height: 350px;
-  max-width: 550px;
+  max-width: 90%;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -101,7 +101,7 @@
 
 .wine-card-footer {
   padding: 16px;
-  background: #e9dada;
+  background: #fafafa;
   display: flex;
   flex-direction: column;
 }

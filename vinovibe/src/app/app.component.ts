@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -30,6 +30,11 @@ export class AppComponent {
         this.isLoginRoute = this.router.url === '/' || this.router.url === '/login' || this.router.url === '/register' || this.router.url === '/recoveryPassword';
       }
     });
+  }
+
+  @HostListener('window:beforeunload', ['$event'])
+  clearLocalStorage(event: any): void {
+    localStorage.clear();
   }
 
 }
